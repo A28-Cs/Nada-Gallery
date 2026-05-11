@@ -101,7 +101,7 @@ export default function OrdersManagement() {
       <Modal isOpen={!!selectedOrder} onClose={() => setSelectedOrder(null)} title={t('admin.orderTitle', { id: String(selectedOrder?.id || '').slice(-8).toUpperCase() })} maxWidth="max-w-2xl">
         {selectedOrder && (
           <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div><p className="text-dark-500 mb-1">{t('common.customer')}</p><p className="text-white">{selectedOrder.shippingAddress?.name || t('common.notAvailable')}</p></div>
               <div><p className="text-dark-500 mb-1">{t('common.phone')}</p><p className="text-white">{selectedOrder.shippingAddress?.phone || t('common.notAvailable')}</p></div>
               <div><p className="text-dark-500 mb-1">{t('common.city')}</p><p className="text-white">{selectedOrder.shippingAddress?.city || t('common.notAvailable')}</p></div>

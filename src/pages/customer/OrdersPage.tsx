@@ -95,7 +95,7 @@ export default function OrdersPage() {
                     <div className="flex justify-between text-dark-400"><span>{t('common.shipping')}</span><span>{formatCurrency(order.shipping)}</span></div>
                     <div className="flex justify-between font-bold text-white pt-2 border-t border-dark-700"><span>{t('common.total')}</span><span>{formatCurrency(order.total)}</span></div>
                   </div>
-                  <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                     <div><p className="text-xs text-dark-500 mb-1">{t('ordersPage.shipTo')}</p><p className="text-white">{order.shippingAddress.name}, {order.shippingAddress.city}</p></div>
                     <div><p className="text-xs text-dark-500 mb-1">{t('common.phone')}</p><p className="text-white">{order.shippingAddress.phone}</p></div>
                   </div>
